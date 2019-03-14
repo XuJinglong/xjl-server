@@ -3,6 +3,7 @@
 //#include <signal.h>
 #include "Config.h"
 #include "GameServer.h"
+#include <stdlib.h>
 //#include <stdio.h>
 
 int main(int argc, char** args)
@@ -15,7 +16,7 @@ int main(int argc, char** args)
         cout<<"config init wrong!"<<endl;
         return 0;
     }
-    uint16_t port = pMainConfig->getInt("port", 5001);
+    uint16 port = pMainConfig->getInt("port", 5001);
     string ip = pMainConfig->getStr("ip", "127.0.0.1");
     cout<<"listen at: "<<ip<<":"<<port<<endl;
     
